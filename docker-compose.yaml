@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+        flask-app:
+                image: qatrainingjaguila/duotaskcomposeimage
+                build: ./duo-task
+                ports:
+                - target: 5000
+                  published: 5000
+                  protocol: tcp
+        nginx:
+                image: nginx:latest
+                ports:
+                - target: 80
+                  published: 80
+                  protocol: tcp
+                volumes:
+                - type: bind
+                  source: ./duo-task/nginx.conf
+                  target: /etc/nginx/nginx.conf
