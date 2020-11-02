@@ -11,7 +11,7 @@ pipeline {
       steps {
       sh "chmod +x ./deployscript1.sh"
       sh "ls"
-      sh ". /deployscript1.sh"
+      sh "./deployscript1.sh"
       }
       }
   }
