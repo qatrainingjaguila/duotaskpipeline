@@ -1,7 +1,7 @@
 version: '3.6'
 services:
         flask-app:
-                build: ./duo-task/
+                image: qatrainingjaguila/duotaskcomposeimage
                 ports:
                 - target: 5000
                   published: 5000
