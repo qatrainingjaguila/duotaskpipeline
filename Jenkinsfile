@@ -9,9 +9,9 @@ pipeline {
       }
     stage('deploy') {
       steps {
-      sh "chmod +x ./deployscript1.sh"
+      sh "chmod +x ./deployscript.sh"
       sh "ls"
-      sh "./deployscript1.sh"
+      sh "./deployscript.sh"
       }
       }
   }
